@@ -1,0 +1,312 @@
+:root{
+    --fuenteParrafos: 'Montserrat', sans-serif;
+
+    --primario: #0F23FE;
+    --secundario: #FD6420;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #e1e1e1;
+    --rojo: #C31616;
+} 
+
+/* reset */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.5rem;
+    line-height: 2;
+    margin: 0;
+    background: linear-gradient(180deg, #0F23FE 0%, #0F23FE 26.9%, rgba(47, 65, 201, 0.85) 49.36%, #D2522B 100%);
+}
+
+/* scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--blanco) var(--primario);
+  }
+  /* Funciona en Chrome, Edge y Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    background: var(--blanco);
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid var(--blanco);
+  }
+
+/* globales */
+
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteParrafos);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.7rem;
+}
+
+h4 {
+    font-size: 2.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+}
+/* utilidades */
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/* Nav */
+
+.header {
+    background-image: url(../assets/img/hero.png);
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.barra {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.enlace_logo{
+    min-width: 30rem;
+    max-width: 50rem;
+    padding: 1rem;
+}
+
+
+.navegacion{
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.navegacion_enlace{
+    color: var(--blanco);
+    padding: .5rem;
+}
+
+.enlace_logo:hover,
+.navegacion_enlace:hover{
+    filter: drop-shadow(0 0 1em var(--blanco));
+}
+
+.navegacion_enlace--contacto{
+    font-weight: bold;
+    border: solid 2px var(--blanco);
+    border-radius: 5rem;
+    transition: all ease-in-out .2s;
+}
+
+.navegacion_enlace--contacto:hover{
+    text-decoration: none;
+    background-color: var(--blanco);
+    color: var(--primario);
+}
+
+@media (min-width: 720px) {
+    
+    .header{
+        height: 80rem;
+    }
+
+    .enlace_logo{
+        width: 30rem;
+    }
+
+    .barra{
+        flex-flow: row nowrap;
+    }
+
+    .navegacion{
+        flex-flow: row nowrap;
+        gap: 2rem;
+    }
+}
+
+/* Sintonizacion */
+
+.sintonizacion{
+    height: 40rem;
+}
+
+.texto_sintonizacion{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--blanco);
+}
+
+.canales{
+    max-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.canales_sintonizacion{
+    margin: 1rem;
+    width: 15rem;
+}
+
+.canales_sintonizacion:hover{
+    filter: drop-shadow(0 0 3em var(--secundario));
+}
+
+
+@media (min-width: 720px) {
+    .sintonizacion{
+        height: 35rem;
+    }
+
+    .texto_sintonizacion{
+        font-size: 2rem;
+    }
+    .canales{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    .canales_sintonizacion{
+        width: 27rem;
+        padding: 2rem;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .logo_YouTube,
+    .logo_Twitch{
+        height: 15rem;
+    }
+}
+
+/* Auspicia */
+
+.auspicia{
+    text-align: center;
+    height: 20rem;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+/* Programas */
+
+.programas{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nuestros_programas{
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.tarjeta_programas{
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.tarjeta_imagen{
+    border-radius: 20px;
+}
+
+.tarjeta_imagen:hover{
+    filter: drop-shadow(0 0 1em var(--secundario));
+}
+
+
+.nombre_programa{
+    margin: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+.descripcion_programas{
+    line-height: 2rem;
+    font-size: 1.5rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 720px) {
+    .tarjeta_programas{
+        width: 70%;
+        display: flex;
+        gap: 2rem;
+        margin: 2rem;
+        align-items: center;
+    }
+    .tarjeta_imagen{
+        width: 40%;
+    }
+}
+
+/* Footer */
+.footer{
+    text-align: center;
+    padding: 2rem;
+    color: var(--blanco);
+}
+
+.titulo_footer{
+    text-transform: uppercase;
+    margin:1rem;
+}
+
+.texto_footer{
+    line-height: 2rem;
+}
