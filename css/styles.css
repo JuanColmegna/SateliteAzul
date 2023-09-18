@@ -99,7 +99,7 @@ p {
     text-align: center;
 }
 
-/* Nav */
+/* Header */
 
 .header {
     background-image: url(../assets/img/hero.png);
@@ -109,6 +109,11 @@ p {
     background-position: center center;
 }
 
+.despegamos{
+    display: none;
+}
+
+/* Nav */
 .barra {
     display: flex;
     flex-flow: column nowrap;
@@ -158,6 +163,31 @@ p {
     .header{
         height: 80rem;
     }
+
+    .despegamos{
+        display: block;
+        color: var(--blanco);
+        text-align: center;
+        margin: 30rem 0;
+    }
+
+    .despegamos_titulo{
+        font-size: 5rem;
+        text-transform: uppercase;
+        animation: aparecerDesaparecer 3s infinite;
+    }
+
+    @keyframes aparecerDesaparecer {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
 
     .enlace_logo{
         width: 30rem;
@@ -234,10 +264,27 @@ p {
 
 .auspicia{
     text-align: center;
-    height: 20rem;
     background-color: var(--secundario);
     color: var(--blanco);
     font-weight: bold;
+}
+
+.imagen_auspiciante{
+    height: 20rem;
+    padding: 1rem;
+}
+
+@media (min-width: 720px) {
+    .auspicia{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    .texto_auspicia{
+        align-self: flex-start;
+    }
 }
 
 /* Programas */
