@@ -13,17 +13,18 @@
     <header class="header">
         <div class="contenedor">
             <div class="barra">
-                <a href="#" class="enlace_logo"><img src="./assets/img/logo.png" alt="logo satelite" class="logo_satelite"></a>
+                <a href="./index.html" class="enlace_logo"><img src="./assets/img/logo.png" alt="logo satelite" class="logo_satelite"></a>
         
                 <nav class="navegacion">
-                    <a href="#" class="navegacion_enlace">Inicio</a>
-                    <a href="#" class="navegacion_enlace">Programación</a>
-                    <a href="#" class="navegacion_enlace navegacion_enlace--contacto">Contacto</a>
+                    <a href="./index.html" class="navegacion_enlace">Inicio</a>
+                    <a href="#programas" class="navegacion_enlace">Programación</a>
+                    <a href="./contacto.html" class="navegacion_enlace navegacion_enlace--contacto">Contacto</a>
                 </nav>
             </div>
         </div>
         <div class="despegamos">
-            <h2 class="despegamos_titulo">Despegamos...</h2>
+            <p id="contador" class="despegamos_texto">5</h1>
+            <p id="mensaje" class="despegamos_texto"></p>
         </div>
     </header>
     <section class="sintonizacion contenedor">
@@ -55,14 +56,14 @@
             <img src="./assets/img/auspiciantes/logo png1.png" alt="En Orbita" class="imagen_auspiciante">
         </div>
     </section>
-    <main class="programas contenedor">
+    <main class="programas contenedor" id="programas">
         <h1 class="nuestros_programas">Nuestros programas:</h1>
         <div class="tarjeta_programas">
             <img src="./assets/img/roscaYTinto.jpg" alt="Imagen Rosca y Tinto" class="tarjeta_imagen">
             <div class="tarjeta_texto">
                 <h3 class="nombre_programa">Rosca y Tinto</h3>
                 <p class="descripcion_programas">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget euismod enim. Maecenas lacinia sem neque. Nunc rutrum elementum nisl a vestibulum.
+                    (Miércoles de 20 a 21:30hs) persigue un desafío arduo: bajar al llano al obnubilado mundo de la política. Con informes, noticias, entrevistas y humor el dúo militante busca analizar la política nacional e internacional. Sin verdades absolutas pero coherentes a su pertenencia nacional y popular, Pablo y Juan Cruz destraban algunos temas que nos parecen inexplicables. 
                 </p>
             </div>
         </div>
@@ -71,7 +72,7 @@
             <div class="tarjeta_texto">
                 <h3 class="nombre_programa">Hijxs de los 90'</h3>
                 <p class="descripcion_programas">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget euismod enim. Maecenas lacinia sem neque. Nunc rutrum elementum nisl a vestibulum.
+                    (Domingos de 20 a 22hs) Somos hijxs de la mejor *o peor* década de la historia y estamos listos para subirnos a una Ferrari y terminar en la estratósfera mientras exploramos temas como política, música, cine, salud mental y economía en un mundo en constante cambio.
                 </p>
             </div>
         </div>
@@ -80,7 +81,7 @@
             <div class="tarjeta_texto">
                 <h3 class="nombre_programa">Pedazo de foro</h3>
                 <p class="descripcion_programas">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget euismod enim. Maecenas lacinia sem neque. Nunc rutrum elementum nisl a vestibulum.
+                    (Lunes de 21 a 23hs) Magazine que aborda temas de Ciencia, Tecnología y Cultura con un toque humorístico. Además de noticias de actualidad, el programa cuenta con  entrevistas, juegos, sorteos, radio-teatro, debates e interacción con los oyentes. Conducen Joao, Salaustiano, Odilo y Cobein.
                 </p>
             </div>
         </div>
@@ -89,7 +90,8 @@
             <div class="tarjeta_texto">
                 <h3 class="nombre_programa">Alto Voltaje</h3>
                 <p class="descripcion_programas">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget euismod enim. Maecenas lacinia sem neque. Nunc rutrum elementum nisl a vestibulum.
+                    (Lunes de 19 a 21hs) El programa que cada Lunes te recarga de energía para comenzar la semana⚡
+                    Escuchanos de 19 a 21 y enterate de las tendencias en redes y de astrología en #Astrofalopa con Paula Rod, debates sin censura con Dana Eme, bienestar de la mano de Gaby Celoria y deportes con Sofi Altamirano.
                 </p>
             </div>
         </div>
@@ -103,5 +105,6 @@
         </p>
     </footer>
     <script src="./js/modernizr.js"></script>
+    <script src="./js/contador.js"></script>
 </body>
 </html>
