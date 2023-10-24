@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- preload -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" as="font" crossorigin="crossorigin">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="./css/styles.css" as="style">
     <link rel="stylesheet" href="./css/styles.css">
+
+    <link rel="preload" href="./css/normalize.css" as="style">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <link rel="preload" href="./assets/img/hero.png" as="image">
+
     <title>Satelite Azul</title>
 </head>
 <body>
@@ -22,28 +31,25 @@
                 </nav>
             </div>
         </div>
-        <div class="despegamos">
-            <p id="contador" class="despegamos_texto">5</h1>
-            <p id="mensaje" class="despegamos_texto"></p>
-        </div>
+        <div class="sintonizacion">
+            <h2 class="texto_sintonizacion">Sintonizanos a través de:</h2>
+            <div class="canales">
+                <div class="canales_sintonizacion">
+                    <a href="#" class="enlace_sintonizacion">
+                        <img src="./assets/img/logoYouTube.png" alt="Logo You Tube" class="logo_YouTube">
+                    </a>
+                    <p class="nombre_sintonizacion">YouTube</p>
+                </div>
+                <div class="canales_sintonizacion">
+                    <a href="#" class="enlace_sintonizacion">
+                        <img src="./assets/img/logoTwitch.png" alt="Logo Twitch" class="logo_Twitch">
+                    </a>
+                    <p class="nombre_sintonizacion">Twitch</p>
+                </div>
+            </div>
+        <div>
     </header>
-    <section class="sintonizacion contenedor">
-        <h2 class="texto_sintonizacion">Sintonizanos a través de:</h2>
-        <div class="canales">
-            <div class="canales_sintonizacion">
-                <a href="#" class="enlace_sintonizacion">
-                    <img src="./assets/img/logoYouTube.png" alt="Logo You Tube" class="logo_YouTube">
-                </a>
-                <p class="nombre_sintonizacion">YouTube</p>
-            </div>
-            <div class="canales_sintonizacion">
-                <a href="#" class="enlace_sintonizacion">
-                    <img src="./assets/img/logoTwitch.png" alt="Logo Twitch" class="logo_Twitch">
-                </a>
-                <p class="nombre_sintonizacion">Twitch</p>
-            </div>
-        </div>
-    </section>
+    
     <section class="auspicia">
         <p class="texto_auspicia">Auspician:</p>
         <div class="aspiciante">
@@ -54,6 +60,9 @@
         </div>
         <div class="aspiciante">
             <img src="./assets/img/auspiciantes/logo png1.png" alt="En Orbita" class="imagen_auspiciante">
+        </div>
+        <div class="aspiciante">
+            <img src="./assets/img/auspiciantes/tomato.png" alt="En Orbita" class="imagen_auspiciante">
         </div>
     </section>
     <main class="programas contenedor" id="programas">
@@ -92,6 +101,15 @@
                 <p class="descripcion_programas">
                     (Lunes de 19 a 21hs) El programa que cada Lunes te recarga de energía para comenzar la semana⚡
                     Escuchanos de 19 a 21 y enterate de las tendencias en redes y de astrología en #Astrofalopa con Paula Rod, debates sin censura con Dana Eme, bienestar de la mano de Gaby Celoria y deportes con Sofi Altamirano.
+                </p>
+            </div>
+        </div>
+        <div class="tarjeta_programas">
+            <img src="./assets/img/mañanaEsTarde.png" alt="Imagen Mañana es Tarde" class="tarjeta_imagen">
+            <div class="tarjeta_texto">
+                <h3 class="nombre_programa">Mañana Es Tarde</h3>
+                <p class="descripcion_programas">
+                    (Jueves de 20 a 21 hs) Programa ambiental que promueve la conciencia ecológica, inspira la acción sostenible y cuestiona el legado que dejaremos a las futuras generaciones. A través de la educación y la movilización, busca abordar la parálisis y la ecoansiedad generadas por los desafíos ambientales actuales.
                 </p>
             </div>
         </div>

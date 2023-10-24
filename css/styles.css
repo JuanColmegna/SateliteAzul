@@ -103,7 +103,6 @@ p {
 
 .header, .body_contacto {
     background-image: url(../assets/img/hero.png);
-    height: 30rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -122,8 +121,7 @@ p {
 }
 
 .enlace_logo{
-    min-width: 30rem;
-    max-width: 50rem;
+    width: 30rem;
     padding: 1rem;
 }
 
@@ -197,10 +195,6 @@ p {
         }
       }
 
-    .enlace_logo{
-        width: 30rem;
-    }
-
     .barra{
         flex-flow: row nowrap;
     }
@@ -220,13 +214,12 @@ p {
 /* Sintonizacion */
 
 .sintonizacion{
-    height: 40rem;
+    font-size: 3rem;
 }
 
 .texto_sintonizacion{
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.5rem;
     color: var(--blanco);
 }
 
@@ -241,36 +234,42 @@ p {
 
 .canales_sintonizacion{
     margin: 1rem;
-    width: 15rem;
+    width: 20rem;
 }
 
 .canales_sintonizacion:hover{
     filter: drop-shadow(0 0 3em var(--secundario));
 }
 
+.logo_YouTube,
+.logo_Twitch {
+    height: 15rem;
+}
 
 @media (min-width: 720px) {
     .sintonizacion{
+        margin-top: 15rem;
         height: 35rem;
     }
 
     .texto_sintonizacion{
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .canales{
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         align-content: center;
+        gap: 8rem;
     }
     .canales_sintonizacion{
-        width: 27rem;
+        width: 40rem;
         padding: 2rem;
         display: flex;
         flex-flow: column nowrap;
     }
     .logo_YouTube,
     .logo_Twitch{
-        height: 15rem;
+        height: 20rem;
     }
 }
 
@@ -278,7 +277,6 @@ p {
 
 .auspicia{
     text-align: center;
-    background-color: var(--secundario);
     color: var(--blanco);
     font-weight: bold;
 }
