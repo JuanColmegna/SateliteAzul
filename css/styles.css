@@ -25,7 +25,7 @@ body {
     font-size: 1.5rem;
     line-height: 2;
     margin: 0;
-    background: linear-gradient(180deg, #0F23FE 0%, #0F23FE 26.9%, rgba(47, 65, 201, 0.85) 49.36%, #D2522B 100%);
+    background: linear-gradient(180deg, #0b1fc0 0%, #0b1fc0 35%, rgba(47, 65, 201, 0.85) 49.36%, #D2522B 100%);
 }
 
 /* scrollbar */
@@ -102,7 +102,7 @@ p {
 /* Header */
 
 .header, .body_contacto {
-    background-image: url(../assets/img/hero.png);
+    background-image: url(../assets/img/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -125,7 +125,6 @@ p {
     padding: 1rem;
 }
 
-
 .navegacion{
     text-transform: uppercase;
     display: flex;
@@ -138,27 +137,21 @@ p {
     padding: .5rem;
 }
 
-.enlace_logo:hover,
-.navegacion_enlace:hover,
-.navegacion_enlace--focus{
+.navegacion_enlace:hover{
     filter: drop-shadow(0 0 1em var(--blanco));
 }
 
-.navegacion_enlace--contacto,
-.navegacion_enlace--focus{
+.navegacion_enlace--contacto{
     font-weight: bold;
     border: solid 2px var(--blanco);
     border-radius: 5rem;
-    transition: all ease-in-out .2s;
+    color: var(--blanco);
 }
 
-.navegacion_enlace--contacto:hover,
-.navegacion_enlace--focus{
-    text-decoration: none;
+.navegacion_enlace--contacto:hover{
     background-color: var(--blanco);
     color: var(--primario);
 }
-
 
 .body_contacto{
     height: 100vh;
@@ -214,10 +207,22 @@ p {
 /* Sintonizacion */
 
 .sintonizacion{
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-top: 5rem;
+    animation: float 3s 3 ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-9px);
+    }
 }
 
 .texto_sintonizacion{
+    font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center;
     color: var(--blanco);
@@ -233,7 +238,7 @@ p {
 }
 
 .canales_sintonizacion{
-    margin: 1rem;
+    margin: 2rem;
     width: 20rem;
 }
 
@@ -243,12 +248,12 @@ p {
 
 .logo_YouTube,
 .logo_Twitch {
-    height: 15rem;
+    height: 10rem;
 }
 
 @media (min-width: 720px) {
     .sintonizacion{
-        margin-top: 15rem;
+        margin-top: 20rem;
         height: 35rem;
     }
 
@@ -276,24 +281,40 @@ p {
 /* Auspicia */
 
 .auspicia{
+    margin-top: 8rem;
     text-align: center;
     color: var(--blanco);
     font-weight: bold;
+    text-transform: uppercase;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.auspicia.mostrar {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .imagen_auspiciante{
-    height: 20rem;
+    width: 15rem;
     padding: 1rem;
 }
 
 @media (min-width: 720px) {
     .auspicia{
+        margin-top: 0;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
         gap: 3rem;
     }
+
+    .imagen_auspiciante{
+        width: 30rem;
+    }
+
     .texto_auspicia{
         align-self: flex-start;
     }
@@ -302,10 +323,12 @@ p {
 /* Programas */
 
 .programas{
+    margin-top: 10rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
 }
 
 .nuestros_programas{
@@ -322,10 +345,7 @@ p {
 
 .tarjeta_imagen{
     border-radius: 20px;
-}
-
-.tarjeta_imagen:hover{
-    filter: drop-shadow(0 0 1em var(--secundario));
+    filter: drop-shadow(0 0 1em var(--negro));
 }
 
 
