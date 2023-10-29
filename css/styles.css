@@ -137,6 +137,7 @@ p {
     padding: .5rem;
 }
 
+.enlace_logo:hover,
 .navegacion_enlace:hover{
     filter: drop-shadow(0 0 1em var(--blanco));
 }
@@ -253,7 +254,7 @@ p {
 
 @media (min-width: 720px) {
     .sintonizacion{
-        margin-top: 20rem;
+        margin-top: 15rem;
         height: 35rem;
     }
 
@@ -286,9 +287,6 @@ p {
     color: var(--blanco);
     font-weight: bold;
     text-transform: uppercase;
-    transform: translateY(100%);
-    opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
 }
 
 .auspicia.mostrar {
@@ -302,6 +300,7 @@ p {
 }
 
 @media (min-width: 720px) {
+
     .auspicia{
         margin-top: 0;
         display: flex;
@@ -309,6 +308,9 @@ p {
         justify-content: center;
         align-items: center;
         gap: 3rem;
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform .8s ease, opacity .8s ease;
     }
 
     .imagen_auspiciante{
