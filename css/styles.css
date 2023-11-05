@@ -14,6 +14,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -254,7 +255,7 @@ p {
 
 @media (min-width: 720px) {
     .sintonizacion{
-        margin-top: 15rem;
+        margin-top: 10rem;
         height: 35rem;
     }
 
@@ -343,24 +344,34 @@ p {
     width: 80%;
     text-align: center;
     padding: 1rem;
-}
-
-.tarjeta_imagen{
-    border-radius: 20px;
+    background-color: var(--blanco);
     filter: drop-shadow(0 0 1em var(--negro));
 }
 
+.tarjeta_imagen{
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, var(--secundario), var(--primario)); 
+    border-image-slice: 1;
+}
 
 .nombre_programa{
     margin: 1rem;
-    color: var(--blanco);
     text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(91deg, var(--secundario) 0%, var(--primario) 79.19%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.texto-horarios{
+    font-weight: 700;
 }
 
 .descripcion_programas{
     line-height: 2rem;
     font-size: 1.5rem;
-    color: var(--blanco);
+    font-weight: 600;
 }
 
 @media (min-width: 720px) {
@@ -376,18 +387,66 @@ p {
     }
 }
 
+/* Contacto */
+
+.contacto{
+    margin-top: 5rem;
+    text-align: center;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.titulo_contacto{
+    text-transform: uppercase;
+}
+
+.redes_sociales{
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlace_redes {
+    color: var(--blanco);
+    width: 18rem;
+}
+
+.logo_red{
+    width: 5rem;
+}
+
+@media (min-width: 720px) {
+    .redes_sociales{
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 /* Footer */
 .footer{
+    margin-top: 3rem;
     text-align: center;
     padding: 2rem;
     color: var(--blanco);
 }
 
-.titulo_footer{
+.boton_footer{
+    font-size: 2rem;
+    color: var(--blanco);
     text-transform: uppercase;
-    margin:1rem;
+    font-weight: 700;
+    padding: 0;
+    line-height: 1rem;
+}
+
+.boton_footer:hover{
+    filter: drop-shadow(0 0 1em var(--blanco));
 }
 
 .texto_footer{
-    line-height: 2rem;
+    margin-top: 1rem;
 }
